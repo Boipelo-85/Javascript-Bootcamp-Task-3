@@ -1,6 +1,4 @@
-const syncOutput = document.getElementById('sync-output');
-const dbOutput = document.getElementById('db-output');
-
+// Synchronous output will be logged to the console instead of the DOM.
 const studentDatabase = [
   { id: 1, firstName: 'Boipelo', lastName: 'Motileng', email: 'boipelomotileng@example.com', course: 'Computer Science', age: 20 },
   { id: 2, firstName: 'Kabi', lastName: 'Mthembu', email: 'kabimthembu@example.com', course: 'Web Design', age: 22 },
@@ -10,21 +8,20 @@ const studentDatabase = [
 ];
 
 function demonstrateSyncExecution() {
-  syncOutput.textContent = '';
-  syncOutput.textContent += 'Step-1 - The function is starting\n';
-  syncOutput.textContent += 'Step-2 - The Process is in action\n';
-  syncOutput.textContent += 'Step-3 - The function reached the final stage\n';
+  console.log('Step-1 - The function is starting');
+  console.log('Step-2 - The Process is in action');
+  console.log('Step-3 - The function reached the final stage');
 }
 
 function displayAllStudents() {
-  dbOutput.textContent = 'Loading student records...';
+  console.log('Loading student records...');
 
   setTimeout(() => {
     const rows = studentDatabase.map(student => {
       return `ID: ${student.id} | ${student.firstName} ${student.lastName} | ${student.email} | ${student.course} | Age: ${student.age}`;
     });
 
-    dbOutput.textContent = 'Student Database:\n' + rows.join('\n');
+    console.log('Student Database:\n' + rows.join('\n'));
   }, 3000);
 }
 
