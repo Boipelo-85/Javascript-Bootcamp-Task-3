@@ -1,4 +1,4 @@
-// Synchronous output will be logged to the console instead of the DOM.
+
 const studentDatabase = [
   { id: 1, firstName: 'Boipelo', lastName: 'Motileng', email: 'boipelomotileng@example.com', course: 'Computer Science', age: 20 },
   { id: 2, firstName: 'Kabi', lastName: 'Mthembu', email: 'kabimthembu@example.com', course: 'Web Design', age: 22 },
